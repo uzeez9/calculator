@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: grid;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+        input {
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+        button {
+            border: none;
+            font-size: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            height: 58px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .output {
+            background-color: rgb(0, 140, 255);
+            height: 200px;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(0, 0, 0);
+            color: black;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .filled {
+            background-color: rgb(0, 140, 255);
+            height: 50px;
+            border-radius: 10px;
+        }
+        .outlined {
+            color: rgb(0, 140, 255);
+            border: 1px solid;
+            background-color: rgb(8, 0, 0);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <h2 class="output">0</h2>
+    <input type="number" placeholder="first value" class="firstval"/>
+    <input type="number" placeholder="second value" class="secondval"/>
+    <div class="buttons">
+        <button class="add outlined">+</button>
+        <button class="subtract outlined">-</button>
+        <button class="multiply outlined">*</button>
+        <button class="divide outlined">/</button>
+        <button class="modulus outlined">%</button>
+        <button class="exponent outlined">**</button>
+        <button class="sqrt outlined">√</button>
+        <button class="log outlined">log</button>
+    </div>
+    <button class="equal filled">=</button>
+</body>
+<script src="./script.js"></script>
+</html>
